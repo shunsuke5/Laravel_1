@@ -14,7 +14,7 @@ Laravel メモ
 
 ・
 
-アプリを作ってみるところから
+Laravelの公式ドキュメントを読みながら理解を深めていく
 
 =================================================================================================================================
 
@@ -43,12 +43,13 @@ Laravel メモ
 　option to true.」のエラーが出た。opensslの拡張を有効にし、再度インストールし直すとインストールが進行し、
 　エラーが出ることなくインストールが完了した。Vendorフォルダも作成されていた。
 
-・Laravelを開始し、localhost:4000で接続すると「SQLSTATE[HY000] [1049] Unknown database」のエラーが出た。
+・Laravelを開始し、localhost:4000で接続すると「SQLSTATE[HY000] [1049] Unknown database 'laravel'」のエラーが出た。
+　.envファイルのDB_DATABASE=laravel を test に変更した。
 
-　上記を直して接続すると、次は「SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.sessions' doesn't exist」
-　のエラーが出た。
-
-　php artisan migrate コマンドを実行すると、自身が保持しているMySQL環境の設定に合わせなくてもLaravelに接続することができた。
-　参考サイト　https://god48.com/sqlstate-base-table-or-view-not-found-1146-table-laravel-sessions-doesnt-exist
+　上記を行ってから接続すると、次は「SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.sessions' doesn't exist」
+　のエラーが出た。調べると、LaravelがDBを扱う際に必要になるテーブルを保持していない、という内容のエラーとのこと。
+　そのため、php artisan migrate コマンドを実行して、設定ファイルで指定しているデータベースにLaravelが扱うテーブルを
+　作成しなければならない。
+　参考サイト　https://kamita.net/program/?p=560
 
 ・
