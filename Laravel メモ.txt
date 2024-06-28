@@ -12,9 +12,20 @@ Laravel メモ
 
 ・.envファイルとdatabase.phpファイルを編集し、無事にブラウザからLaravelを表示することができた。
 
+・公式ドキュメントのインストールガイド内にある「Next Steps」に「Laravel Bootcamp」のリンクがあったので、
+　それを読みながら進めている。最も率直らしいのでBladeの手順を進めた。
+　インストールガイドは →　https://laravel.com/docs/11.x#databases-and-migrations
+　Bootcampは →　https://bootcamp.laravel.com/
+
+・php artisan serve コマンドを実行してサーバーを起動し、localhost:8000 と打ち込んで表示されるページ右上の
+　「Register」からユーザーを登録した。以降ログインにはこの情報を使うはず。
+　ちなみに、こういった学習用のユーザーパスワードは「ユーザー名と同じもの」とする。rootならroot、adminならadmin、
+　shunsukeならshunsuke、のようにする。
+
 ・
 
-Laravelの公式ドキュメントを読みながら理解を深めていく
+https://bootcamp.laravel.com/blade/creating-chirps
+の「Saving the Chirp」の下の文を読むところ(コードはもう書いた)から
 
 =================================================================================================================================
 
