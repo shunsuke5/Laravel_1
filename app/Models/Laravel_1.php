@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Laravel_1 extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'message',
+    ];
 }
