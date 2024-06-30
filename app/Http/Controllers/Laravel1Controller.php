@@ -15,7 +15,9 @@ class Laravel1Controller extends Controller
      */
     public function index(): View
     {
-        return view('Laravel_1s.index');
+        return view('Laravel_1s.index', [
+            'Laravel_1s' => Laravel_1::with('user')->latest()->get(),
+        ]);
     }
 
     /**

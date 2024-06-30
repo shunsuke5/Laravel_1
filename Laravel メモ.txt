@@ -24,9 +24,12 @@ Laravel メモ
 
 ・Laravelの時間が標準時子午線の時間になってしまっているので、直す。
 
-・
+・app\Models\配下のUser.php と Laravel_1.phpの HasMany と BelongsTo は対称的な設定。
+　そのため、ユーザ側に設定したものと対するものをサーバ側のモデルに設定する必要がある？
 
-「04. Showing Chirps」から
+・php.ini の date.timezone = に Asia/Tokyo を設定した。
+
+「05 Editing Chirps」から
 
 =================================================================================================================================
 
@@ -63,5 +66,15 @@ Laravel メモ
 　そのため、php artisan migrate コマンドを実行して、設定ファイルで指定しているデータベースにLaravelが扱うテーブルを
 　作成しなければならない。
 　参考サイト　https://kamita.net/program/?p=560
+
+・webアプリでメッセージを送った時間がUTCになっていたので、
+　「C:\Apache24\htdocs\Laravel_1\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\LoadConfiguration.php」ファイルの
+　date_default_timezone_set の UTC を UTC+9 とした。その状態でphp artisan コマンドを実行したり、Webページを表示すると
+　「PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+9' is invalid in C:\Apache24\htdocs\Laravel_1\vendor\
+　laravel\framework\src\Illuminate\Foundation\Bootstrap\LoadConfiguration.php on line 46」のようなエラーが出る。
+　　→ 原因は.envファイルの「APP_TIMEZONE」の設定値が UTC+9 となっていることだった。ここをJSTに変更すると、
+　　　次は同じエラー文でJST is invalid in ... のように表示された。ここを UTC に変更すると、エラーが無くなった。
+　　　しかしなぜ.envファイルのことなのにLoadConfiguration.phpのエラーのような表示がされるのか？
+　　　そして、.envをJSTにする方法は無いのだろうか？
 
 ・
