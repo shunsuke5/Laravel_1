@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Laravel1Controller;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestController;
 use App\Models\Laravel_1;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('Laravel_1s', Laravel1Controller::class)
-    ->only(['index', 'store'])
+    ->only(['index', 'store', 'edit', 'update'])
     ->middleware(['auth', 'verified']);
+
+Route::resource('Test', TestController::class);
 
 require __DIR__.'/auth.php';

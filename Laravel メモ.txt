@@ -29,7 +29,9 @@ Laravel メモ
 
 ・php.ini の date.timezone = に Asia/Tokyo を設定した。
 
-「05 Editing Chirps」から
+・Laravelにおいて、全てのリクエストの入り口はpublic/index.phpファイル。
+
+next step の Lifecycle Overview の First stepsから
 
 =================================================================================================================================
 
