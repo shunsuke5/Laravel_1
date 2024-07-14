@@ -1,0 +1,78 @@
+英語メモ
+
+熟語など
+
+A as well as B | As well as B, A...
+　→ BだけでなくAも、(Aも)Bと同様に、AはBと同じぐらい
+
+if
+　→ ～かどうか、といった使い方もできる。
+
+    例:if the user of your application is authenticated.
+    訳:アプリのユーザが認証されているかどうか
+
+like ～
+　→ 例えば、～　といった使い方もある。
+
+    例:like PreventRequestsDuringMaintenance,
+    訳:例えば、PreventRequestsDuringMaintenance などです。
+
+while
+　→ 一方で、という意味もある。
+
+    例:while some are only assigned to specific routes or route groups.
+    訳:一方で、特定のルートやルートグループに割り当てられるミドルウェアもある。
+
+all of ～
+　→ 全ての～
+
+    例:all of the matched route's assigned middleware,
+    訳:
+
+by the ～
+　→ ～によって
+
+send back through ～
+　→ ～を通して送り返す
+
+the matched route's
+　→ 's は所有格を表すため、「一致したルート"の"」という意味になる。
+
+have a firm grasp of ～
+　→ ～をしっかりと理解する、把握する
+
+look through ～
+　→ ～を見通す、～に目を通す
+
+get familiar with
+　→ ～に慣れる、～に親しむ
+
+such as ～
+　→ ～のような
+
+It is often helpful to ～
+　→ たいていの場合～することは役に立つ。
+
+you may wish to ～
+　→ ～したい場合があるかもしれない。
+　　～するのが望ましいかもしれない。
+
+production server
+　→ 本番機
+
+To make this a cinch
+　→ これを作るのは簡単です。cinchに「容易」のような意味がある。
+
+by ～
+　→ ～によって。
+
+
+
+===============================================================================================================================
+
+あまり理解できてないがこう翻訳されたからこう書いたやつ
+
+all of the matched route's assigned middleware
+　→ 一致したルートに割り当てられたすべてのミドルウェア
+　　all ofがmiddlewareにかかってるのが納得いかん
+
